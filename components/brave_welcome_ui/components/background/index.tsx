@@ -66,10 +66,8 @@ function Background (props: BackgroundProps) {
   return (
     <S.Box ref={isReadyForAnimation ? ref : null} style={containerStyle}>
       <div className={classnames('visual-layers', { 'is-visible': hasLoaded })} style={layerWrapperStyle}>
-        {/* 科技感背景网格 */}
         <div className="tech-grid" style={gridStyle} />
         
-        {/* 抽象流体球体 - 创造深度感 */}
         <div className="orb-1" style={{ ...orbBase, background: 'radial-gradient(circle, #4c1d95 0%, transparent 70%)', top: '-10%', left: '-10%', width: '60vw', height: '60vw' }} />
         <div className="orb-2" style={{ ...orbBase, background: 'radial-gradient(circle, #1e40af 0%, transparent 70%)', bottom: '10%', right: '-5%', width: '50vw', height: '50vw' }} />
         <div className="orb-3" style={{ ...orbBase, background: 'radial-gradient(circle, #701a75 0%, transparent 70%)', top: '20%', right: '15%', width: '40vw', height: '40vw' }} />
@@ -82,10 +80,9 @@ function Background (props: BackgroundProps) {
   )
 }
 
-// --- 样式定义 (可以使用 styled-components 或 inline styles) ---
 
 const containerStyle: React.CSSProperties = {
-  backgroundColor: '#050505', // 极简深色背景
+  backgroundColor: '#050505', 
   overflow: 'hidden',
   position: 'relative',
   width: '100vw',

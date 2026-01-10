@@ -1,12 +1,12 @@
 {
-    "name": "nexanon",
+    "name": "kilo",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "getbrave": "tsx ./nexanon_build/commands/scripts/getBrave.ts",
-        "build": "tsx ./nexanon_build/commands/scripts/build.ts",
-        "applyPatch": "tsx ./nexanon_build/commands/scripts/applyPatch.ts",
-        "rebrand": "tsx ./nexanon_build/commands/scripts/rebrand.ts"
+        "getbrave": "tsx ./project_build/commands/scripts/getBrave.ts",
+        "build": "tsx ./project_build/commands/scripts/build.ts",
+        "applyPatch": "tsx ./project_build/commands/scripts/applyPatch.ts",
+        "rebrand": "tsx ./project_build/commands/scripts/rebrand.ts"
     },
     "devDependencies": {
         "@types/node": "^25.0.3",
