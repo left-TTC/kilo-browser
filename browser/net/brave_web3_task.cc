@@ -132,7 +132,7 @@ namespace Brave_web3_solana_task{
 
 
     // https://search.brave.com/search?q=x.web3
-
+ 
     // this is a important function
     // if there are not correspond setting
     // the brower will crashed or the net service will crashed
