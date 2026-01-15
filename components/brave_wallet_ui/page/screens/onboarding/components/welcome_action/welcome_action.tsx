@@ -59,7 +59,7 @@ export const WelcomeAction = ({
             gap={leo.spacing.m}
             $wrap
           >
-            {walletIcons && walletIcons.length > 0 && <img src={kilo} style={{width:"24px"}}/>}
+            {walletIcons && walletIcons.length > 0 && <img src={kilo} style={{width:"20px"}}/>}
             {walletIcons?.map((icon, index) => (
               <React.Fragment key={index}>
                 {typeof icon === 'string' ? (

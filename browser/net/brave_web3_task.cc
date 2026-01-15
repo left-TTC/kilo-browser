@@ -36,8 +36,6 @@ namespace Brave_web3_solana_task{
     std::string get_local_ipfs_gateway(){
         PrefService* prefs = g_browser_process->local_state();
 
-        return "http://116.202.49.39";
-
         if(prefs){
             LOG(INFO) << "FMC local ipfs gateway: "<< decentralized_dns::GetIpfsGateWay(prefs);
             return decentralized_dns::GetIpfsGateWay(prefs); 
