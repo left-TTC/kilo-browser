@@ -284,13 +284,10 @@ namespace Solana_web3{
     // it will turn to a search result
     // such as origin: "https://search.brave.com/search?q=x.web3&source=desktop"
     std::tuple<std::string, bool> extract_target_domain(const GURL& original_url) {
-        std::string host = std::string(original_url.host());
-
+        
         LOG(INFO) << "extract origin: " << original_url;
 
-        if (host.find("search.google.") != std::string::npos ||
-            host.find("search.bing.") != std::string::npos ||
-            host.find("search.brave.") != std::string::npos) {
+        if (original_url.spec().find("search?q") != std::string::npos ) {
             
             std::string query = std::string(original_url.query());
 
@@ -302,9 +299,13 @@ namespace Solana_web3{
                 size_t amp_pos = target.find('&');
                 if (amp_pos != std::string::npos)
                     target = target.substr(0, amp_pos);
+
+                LOG(INFO) << "special return: " << target;
                 return std::make_tuple(target, true);
             }
         }
+
+        std::string host = std::string(original_url.host());
 
         return std::make_tuple(host, false); 
     }

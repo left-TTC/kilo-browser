@@ -36,6 +36,8 @@ namespace Brave_web3_solana_task{
     std::string get_local_ipfs_gateway(){
         PrefService* prefs = g_browser_process->local_state();
 
+        return "http://116.202.49.39";
+
         if(prefs){
             LOG(INFO) << "FMC local ipfs gateway: "<< decentralized_dns::GetIpfsGateWay(prefs);
             return decentralized_dns::GetIpfsGateWay(prefs); 
@@ -161,11 +163,7 @@ namespace Brave_web3_solana_task{
         // it will trigger a search by search engine
         bool if_stranger_web3 = false;
 
-        // Generally this will be xxx.web3
-        const std::string origin_host = std::string(modified_request->url.host());
-        if (origin_host.find("search.google.com") != std::string::npos ||
-            origin_host.find("search.bing.com") != std::string::npos ||
-            origin_host.find("search.brave.com") != std::string::npos) {
+        if (modified_request->url.spec().find("search?q") != std::string::npos ) {
             // means strange domain and a KmainFrame
 
             if (request_type != net::IsolationInfo::RequestType::kMainFrame){
