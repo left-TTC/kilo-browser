@@ -166,7 +166,7 @@ namespace Solana_Rpc{
         std::string maybe_domain
     );
 
-    void use_root_prefs();
+    // void use_root_prefs();
 
     void get_all_root_pubkey(
         std::string contents,

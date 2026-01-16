@@ -206,18 +206,19 @@ namespace Solana_Rpc{
     ){
         // LOG(INFO) << "root name info: " << content;
         if(content.empty()){
+            // use_root_prefs();
             return;
         }
 
         absl::optional<base::Value> parsed = base::JSONReader::Read(content, base::JSONParserOptions(0));
         if (!parsed.has_value()) {
             LOG(ERROR) << "Failed to parse JSON";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
         if (!parsed->is_dict()) {
             LOG(ERROR) << "Parsed JSON is not a dictionary";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
 
@@ -226,13 +227,13 @@ namespace Solana_Rpc{
         const base::Value::Dict* result_dict = roots_json.FindDict("result");
         if (!result_dict) {
             LOG(ERROR) << "No 'result' field or not a dictionary";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
         const base::Value::List* value_list = std::move(result_dict)->FindList("value");
         if (!value_list) {
             LOG(ERROR) << "No 'value' field or not a list";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
 
@@ -343,25 +344,25 @@ namespace Solana_Rpc{
         request_sender->SendJsonRequestWithIpfsStart(request_json, url_loader_factory, std::move(restart_callback), std::move(maybe_domain));
     }
 
-    void use_root_prefs(){
-        PrefService* prefs = g_browser_process->local_state();
+    // void use_root_prefs(){
+    //     PrefService* prefs = g_browser_process->local_state();
 
-        LOG(INFO) << "FFFFFFF will use local";
+    //     LOG(INFO) << "FFFFFFF will use local";
 
-        if(prefs){
-            std::vector<std::string> local_root_names =  decentralized_dns::GetWnsRootNames(prefs); 
+    //     if(prefs){
+    //         std::vector<std::string> local_root_names =  decentralized_dns::GetWnsRootNames(prefs); 
 
-            for(const auto& root: local_root_names){
-                LOG(INFO) << "FMC local root name: "<< root;
-            }
+    //         for(const auto& root: local_root_names){
+    //             LOG(INFO) << "FMC local root name: "<< root;
+    //         }
 
-            SolanaRootMap& rootMap = SolanaRootMap::instance();
-            rootMap.set_all(local_root_names);
-        }else{
-            LOG(INFO) << "FMC no local root names";
-            return;
-        }
-    }
+    //         SolanaRootMap& rootMap = SolanaRootMap::instance();
+    //         rootMap.set_all(local_root_names);
+    //     }else{
+    //         LOG(INFO) << "FMC no local root names";
+    //         return;
+    //     }
+    // }
 
     void get_all_root_pubkey(
         std::string contents,
@@ -370,18 +371,18 @@ namespace Solana_Rpc{
 
         if(contents.empty()){
             LOG(INFO)<<"contents empty, use local root names"<< contents; 
-            use_root_prefs();
+            // use_root_prefs();
         }
         
         absl::optional<base::Value> parsed = base::JSONReader::Read(contents, base::JSONParserOptions(0));
         if (!parsed.has_value()) {
             LOG(ERROR) << "Failed to parse JSON";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
         if (!parsed->is_dict()) {
             LOG(ERROR) << "Parsed JSON is not a dictionary";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
 
@@ -390,7 +391,7 @@ namespace Solana_Rpc{
         const base::Value::List* result_list = roots_json.FindList("result");
         if(!result_list){
             LOG(ERROR) << "No 'result' field or not a list";
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
 
@@ -424,7 +425,7 @@ namespace Solana_Rpc{
         }
 
         if(pubkeys.size() == 0){
-            use_root_prefs();
+            // use_root_prefs();
             return;
         }
         SolanaRootMap& rootMap = SolanaRootMap::instance();

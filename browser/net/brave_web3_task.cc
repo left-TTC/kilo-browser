@@ -68,7 +68,7 @@ namespace Brave_web3_solana_task{
         }
 
         // check the map state
-        if(all_root_domains.size() == 0 && !rootMap.has_loaded){
+        if(all_root_domains.size() == 0 || !rootMap.has_loaded){
             auto* storage_partition = browser_context->GetDefaultStoragePartition();
             scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory =
                 storage_partition->GetURLLoaderFactoryForBrowserProcess();
@@ -130,7 +130,7 @@ namespace Brave_web3_solana_task{
 
 
     // https://search.brave.com/search?q=x.web3
- 
+
     // this is a important function
     // if there are not correspond setting
     // the brower will crashed or the net service will crashed
