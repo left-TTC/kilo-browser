@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="-20 -40 108 108" preserveAspectRatio="xMidYMid meet">
+  <!-- K -->
+  <path
+    d="M5 0 L5 28 L15 28 L15 18 L25 28 L33 28 L20 13 L33 0 L25 0 L15 10 L15 0 Z"
+    fill="#000000"
+  />
+  <!-- i -->
+  <path
+    d="M35 13 L35 28 L39 28 L39 13 Z M35 8 L35 10 L39 10 L39 8 Z"
+    fill="#000000"
+  />
+  <!-- l -->
+  <path
+    d="M42 13 L42 28 L46 28 L46 13 Z"
+    fill="#000000"
+  />
+  <!-- o -->
+  <path
+    d="M50 13 L65 13 L65 28 L50 28 Z"
+    fill="#000000"
+  />
+</svg>
