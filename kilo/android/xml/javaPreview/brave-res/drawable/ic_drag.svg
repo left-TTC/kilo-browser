@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     width="24"
+     height="24">
+  <path d="M19.17 14.92H4.83a0.83 0.83 0 0 1 0-1.67h14.34a0.83 0.83 0 0 1 0 1.67Zm0-4.17H4.83a0.83 0.83 0 0 1 0-1.67h14.34a0.83 0.83 0 0 1 0 1.67Z" fill="@color/schemes_on_surface_variant" fill-rule="evenodd"/>
+</svg>

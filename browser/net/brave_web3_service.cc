@@ -192,12 +192,15 @@ namespace Solana_web3{
                 }
             }
 
+            const std::string  PDA_MARKER = PDAMarker();
+
             //Combine all the seeds to one data
             std::vector<uint8_t> combined_data;
             size_t total_seeds_len = 0;
             for (const auto& seed: seeds){
                 total_seeds_len += seed.size();
             }
+            
             //Allocate capacity for data
             combined_data.reserve(total_seeds_len + Pubkey::LENGTH + PDA_MARKER.size());
             for (const auto& seed : seeds) {
@@ -245,6 +248,9 @@ namespace Solana_web3{
         }
 
         PDA get_account_from_root(const std::string& domain, const Pubkey &root_domain_account){
+
+            const std::string PREFIX = Prefix();
+
             const std::string combined_domain = PREFIX + domain;
             const std::vector<uint8_t> combined_domain_bytes(combined_domain.begin(), combined_domain.end());
             

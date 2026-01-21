@@ -404,7 +404,10 @@ namespace Solana_Rpc{
 
             const std::string* pubkey = item.FindString("pubkey");
             if (pubkey){
-                const std::string combined_string = Solana_web3::PREFIX + *pubkey ;
+
+                const std::string PREFIX = Solana_web3::Prefix();
+
+                const std::string combined_string = PREFIX + *pubkey ;
                 const std::vector<uint8_t> combined_domain_bytes(combined_string.begin(), combined_string.end());  
                 
                 std::array<uint8_t, Solana_web3::Pubkey::LENGTH> hash_domain; 
