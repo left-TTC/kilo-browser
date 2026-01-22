@@ -30,13 +30,9 @@ namespace Solana_web3{
 
     const size_t MAX_SEED_LEN = 32;
 
-    std::string PDAMarker() {
-        return "ProgramDerivedAddress";
-    }
+    std::string PDAMarker();
 
-    std::string Prefix() {
-        return "WEB3 Name Service";
-    }
+    std::string Prefix();
 
     std::string EncodeBase58(const std::vector<uint8_t> &input);
 

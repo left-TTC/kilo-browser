@@ -24,6 +24,16 @@ namespace Solana_web3{
     }
 
 
+    std::string PDAMarker() {
+        return "ProgramDerivedAddress";
+    }
+
+    std::string Prefix() {
+        return "WEB3 Name Service";
+    }
+
+
+
     /**
      * @brief convert bytes to readable string
      */
