@@ -46,12 +46,18 @@ bool IsSnsResolveMethodEnabled(PrefService* local_state);
 
 ResolveMethodTypes GetWnsResolveMethod(PrefService* local_state);
 bool IsWnsResolveMethodEnabled(PrefService* local_state);
+
+
 std::string GetIpfsGateWay(PrefService* local_state);
+void SetIpfsGateWay(PrefService* local_state, const std::string& value);
+
 
 std::vector<std::string> GetWnsRootNames(PrefService* local_state);
 void SetWnsRootNames(PrefService* local_state, const std::vector<std::string>& rootNames);
 
+
 std::string GetRpcGateWay(PrefService* local_state);
+void SetRpcGateWay(PrefService* local_state, const std::string& value);
 
 }  // namespace decentralized_dns
 

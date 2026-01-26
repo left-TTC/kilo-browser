@@ -1,5 +1,4 @@
-
-package org.chromium.kilo;
+package org.chromium.chrome.browser.kilo;
 
 
 

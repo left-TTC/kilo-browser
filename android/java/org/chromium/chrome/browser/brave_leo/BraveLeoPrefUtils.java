@@ -17,7 +17,7 @@ import org.chromium.chrome.browser.settings.BraveLeoPreferences;
 import org.chromium.components.prefs.PrefService;
 import org.chromium.components.user_prefs.UserPrefs;
 
-import org.chromium.kilo.KiloFeatures;
+import org.chromium.chrome.browser.kilo.KiloFeatures;
 
 public class BraveLeoPrefUtils {
     private static final String TAG = "BraveLeoPrefUtils";

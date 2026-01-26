@@ -191,9 +191,17 @@ bool IsWnsResolveMethodEnabled(PrefService* local_state) {
     return false;
 }
 
+
+
+//wns ipfs gateway: like http://ipfs.io/
 std::string GetIpfsGateWay(PrefService* local_state) {
     return local_state->GetString(kWnsResolveMethodGateWay);
 }
+
+void SetIpfsGateWay(PrefService* local_state, const std::string& value) {
+    local_state->SetString(kWnsResolveMethodGateWay, value);
+}
+
 
 std::vector<std::string> GetWnsRootNames(PrefService* local_state) {
     std::vector<std::string> result;
@@ -225,8 +233,13 @@ void SetWnsRootNames(PrefService* local_state,
     LOG(INFO) << "WnsRootNames fully reset with " << root_names.size() << " entries.";
 }
 
+// 
 std::string GetRpcGateWay(PrefService* local_state) {
     return local_state->GetString(kWnsRpcResolveWay);
+}
+
+void SetRpcGateWay(PrefService* local_state, const std::string& value) {
+    local_state->SetString(kWnsRpcResolveWay, value);
 }
 
 }  // namespace decentralized_dns
