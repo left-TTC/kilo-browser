@@ -1,12 +1,15 @@
 declare_args(){
 
+    kilo_version = "0.0.1"
+
     enable_browser_brave_talk = false
 
-    enable_browser_brave_VPN = true
+    enable_browser_brave_VPN = false
 
-    enable_browser_brave_leo = true
+    enable_browser_brave_leo = false
     
     enable_browser_brave_talk = false
 
     enable_browser_brave_rewards = false
+    
 }
