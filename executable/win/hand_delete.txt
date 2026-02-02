@@ -1,0 +1,3 @@
+Resource
+gen
+indexer_ts_files

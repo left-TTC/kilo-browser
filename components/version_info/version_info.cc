@@ -10,7 +10,7 @@
 namespace version_info {
 
 std::string GetBraveVersionWithoutChromiumMajorVersion() {
-  return constants::kKiloBrowserVersion;
+  return constants::kBraveBrowserVersion;
 }
 
 std::string GetBraveChromiumVersionNumber() {
