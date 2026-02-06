@@ -20,10 +20,6 @@ static std::string JNI_AboutSettingsBridge_GetApplicationVersion(JNIEnv* env) {
   application.append(" ");
   application.append(
       version_info::GetBraveKiloVersion());
-  application.append(", Brave");
-  application.append(" ");
-  application.append(
-      version_info::GetBraveVersionWithoutChromiumMajorVersion());
   application.append(", Chromium ");
   application.append(version_info::GetBraveChromiumVersionNumber());
 

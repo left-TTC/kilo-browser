@@ -10,6 +10,7 @@
     "chromium_src": "src/brave/chromium_src",
     "components": "src/brave/components",
     "resource_img": "src/brave",
+    "renderer": "src/brave/renderer",
     "resource_browser_string": "src/brave",
     "resource_internal_string": "src/brave",
     "ui": "src/ui"
