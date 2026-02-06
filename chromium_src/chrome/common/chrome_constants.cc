@@ -59,9 +59,9 @@ const base::FilePath::CharType kHelperProcessExecutableName[] = FPL("exe");
 
 #if BUILDFLAG(IS_WIN)
 const base::FilePath::CharType kBrowserProcessExecutablePath[] =
-    FPL("brave.exe");
+    FPL("kilo.exe");
 const base::FilePath::CharType kHelperProcessExecutablePath[] =
-    FPL("brave.exe");
+    FPL("kilo.exe");
 #elif BUILDFLAG(IS_MAC)
 const base::FilePath::CharType kBrowserProcessExecutablePath[] =
     FPL(PRODUCT_STRING ".app/Contents/MacOS/" PRODUCT_STRING);
